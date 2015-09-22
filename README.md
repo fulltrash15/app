@@ -12,6 +12,7 @@ O fulltrash é um webapp desenvolvido para monitorar em tempo real a quantidade 
 
 Algumas das tecnologias utilizadas são:
 - [NodeJS](https://nodejs.org/en/)
+- [Johnny-Five](http://johnny-five.io/)
 - [ExpressJS](http://expressjs.com/)
 - [AngularJS](https://angularjs.org/)
 - [Socket.IO](http://socket.io/)
