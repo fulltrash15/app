@@ -1,0 +1,17 @@
+{
+  "name": "arduino_app",
+  "version": "1.0.0",
+  "description": "Arduino App",
+  "main": "blink.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "johnny-five": "^0.8.87",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andre-Mauro-Eduardo",
+  "license": "ISC"
+}

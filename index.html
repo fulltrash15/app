@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html lang="en" ng-app="ArduinoApp" class="no-js"> <!--<![endif]-->  
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Arduino App</title>
+</head>  
+<body>  
+  <script src="lib/angular/angular.min.js"></script>  
+  <script src="lib/angular-socket-io/socket.min.js"></script>
+  <script src="lib/socket.io-client/socket.io.js"></script>
+ 
+  <h1>Arduino App</h1>
+  
+  <div ng-controller="ArduinoController">
+    <button ng-click="ledOn()">Ativar</button>
+    <button ng-click="ledOff()">Desativar</button>
+
+    <h5>Console:</h5>
+    <p ng-repeat="led in leds">{{led.estado}} - {{led.hora | date:"dd/MM/yyyy mm:ss:ms"}}</p>
+  </div>
+
+  <script src="js/app.js"></script>
+ 
+</body>
