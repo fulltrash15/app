@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html lang="en" ng-app="ArduinoApp" class="no-js"> <!--<![endif]-->  
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+
+  <title>Arduino App</title>
+</head>  
+<body>  
+  <script src="lib/angular/angular.min.js"></script>  
+  <script src="lib/angular-socket-io/socket.min.js"></script>
+  <script src="lib/socket.io-client/socket.io.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+  <div class="container" ng-controller="ArduinoController2">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Full Trash</h2>
+        <p>App para controlar uma lixeira inteligente utilizando <code>&lt;Javascript&gt;</code> e <code>&lt;Arduino&gt;</code></p>
+      </div>  
+      <div class="col-xs-12">
+        <button class="btn btn-primary" ng-click="ledOn()">Iniciar</button>
+      </div>
+    </div>
+    <div class="col-xs-12" style="margin-top:50px;">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{led.estado}}">
+          {{led.estado}}
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12" style="margin-top:20px;" ng-show="led.valor == 100">
+      <img class="img-responsive center-block" src="img/lixeira.png" alt="Lixeira Cheia" width="200" height="230">
+    </div>
+  </div>
+  
+  <script src="js/app.js"></script>
+ 
+</body>

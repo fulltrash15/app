@@ -23,3 +23,19 @@ app.controller('ArduinoController', function ($scope,socket) {
     })
 
 });
+
+//controller
+app.controller('ArduinoController2', function ($scope,socket) {
+    
+    $scope.led = {};
+
+    $scope.ledOn = function () {
+        socket.emit('led:on');
+    };
+
+    socket.on('data', function (data) {
+        console.log(data);
+        $scope.led = data;
+    })
+
+});
